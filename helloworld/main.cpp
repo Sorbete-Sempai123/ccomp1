@@ -34,6 +34,13 @@ int comparar3(int n,int m,int o){
     else {if(n>m)cout<<o<<" Es mayor que "<<n<<" Es mayor que "<<m;else cout<<o<<" Es mayor que "<<m<<" Es mayor que "<<n;}
 }
 
+bool colision(int x, int y,int tamx,int tamy, int x2 , int y2,int tamx2 , int tamy2){
+    int deltax=(tamx-tamx2),deltay=(tamy-tamy2);
+    if (deltax>0)deltax=deltax*-1;
+    if (deltay>0)deltay=deltay*-1;
+    if (deltax-tamx/2-tamx2/2<0 && deltay-tamy/2-tamy2/2<0) return 1;
+
+}
 
 
 
