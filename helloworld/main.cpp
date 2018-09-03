@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 
 using namespace std;
 
@@ -9,12 +10,13 @@ int factorial(int n){
 }
 
 int primo(int n){
-    if (n%2==0)return 0;
+    if (n%2==0 && n!=2)return 0;
     int acum=0,counter=1;
     while(counter<(n/2)){
-    if (n%counter==0)acum++;
-    if(acum>2)return 0;
+    if (n%counter==0){acum++;cout<<acum<<endl;}
+    if(acum>1)return 0;
     counter=counter+2;
+
     }
     return 1;
 }
@@ -32,15 +34,19 @@ int comparar3(int n,int m,int o){
     else {if(n>m)cout<<o<<" Es mayor que "<<n<<" Es mayor que "<<m;else cout<<o<<" Es mayor que "<<m<<" Es mayor que "<<n;}
 }
 
+
+
+
 int main(){
+
     int n;
     cin>>n;
     //cout<<factorial(n)<<endl;
     cout<<primo(n)<<endl;
-    int a,b,c;
+    //int a,b,c;
 
-    cout<<"Escriba los 3 numeros\n";cin>>a>>b>>c;
-    comparar3(a,b,c);
+    //cout<<"Escriba los 3 numeros\n";cin>>a>>b>>c;
+    //comparar3(a,b,c);
 
 
 }
