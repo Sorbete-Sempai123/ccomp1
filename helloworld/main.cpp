@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include <math.h>
 
 using namespace std;
 
@@ -9,13 +10,23 @@ int factorial(int n){
     return acum;
 }
 
+bool num_perfect(int n){
+    int acum=0;
+    for(int i=1;i<n/2+1;i++){
+    if(n%i==0)acum+=i;
+    }
+    if (acum==n)return 1;
+    return 0;
+}
 int primo(int n){
     if (n%2==0 && n!=2)return 0;
     int acum=0,counter=1;
     while(counter<(n/2)){
-    if (n%counter==0){acum++;cout<<acum<<endl;}
-    if(acum>1)return 0;
-    counter=counter+2;
+        if (n%counter==0){
+            acum++;cout<<acum<<endl;
+        }
+        if(acum>1)return 0;
+            counter=counter+2;
 
     }
     return 1;
@@ -46,11 +57,15 @@ bool colision(int x, int y,int tamx,int tamy, int x2 , int y2,int tamx2 , int ta
 
 int main(){
 
-    int n;
+    long long n;
     cin>>n;
     //cout<<factorial(n)<<endl;
-    cout<<primo(n)<<endl;
-    //int a,b,c;
+    cout<<num_perfect(n)<<"\tNumero Perfecto"<<endl;
+    cout<<primo(n)<<"\tNumero Primo\n";
+    for(long long i=1;i<n+1;i++){
+    if(num_perfect(pow(2,i-1)*(pow(2,i)-1)))
+    cout<<(long long)(pow(2,i-1)*(pow(2,i)-1))<<endl;
+    }//int a,b,c;
 
     //cout<<"Escriba los 3 numeros\n";cin>>a>>b>>c;
     //comparar3(a,b,c);
