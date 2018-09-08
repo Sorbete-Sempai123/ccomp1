@@ -10,6 +10,16 @@ int factorial(int n){
     return acum;
 }
 
+int sum_dig(int x){
+	int acum=0;
+	for(int i=1;x>9;i++){
+		acum=acum+x%10;
+		x/=10;
+	}
+	acum+=x;
+	return acum;
+}
+
 bool num_perfect(int n){
     int acum=0;
     for(int i=1;i<n/2+1;i++){
