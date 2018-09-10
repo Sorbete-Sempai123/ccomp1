@@ -10,6 +10,18 @@ int factorial(int n){
     return acum;
 }
 
+int sumsquaredifference(int n){//n es el rango    pd:6
+    int acum=0; 
+    for(int i=1;i<n+1;i++){//suma de cuadrados
+     acum+=(i*i);
+     }
+    int acum2=0;
+    for(int i=1;i<n+1;i++){
+    acum2+=i;
+    }
+     return acum2*acum2-acum;
+}
+
 void cambio(int *x,int *y){
 	*x=*x+*y;
 	*y=*x-*y;
