@@ -22,6 +22,19 @@ int sumsquaredifference(int n){//n es el rango    pd:6
      return acum2*acum2-acum;
 }
 
+int mayprimo(long long n){ //n es el numero , del cual queremos hallar el mayor divisor primo   pd:3
+    long long mayor=0;
+    for(long long i=1;i<n/2+1;i++){
+        if(n%i==0 && primo(i)){
+              mayor=i;
+        cout<<i<<endl;
+         }
+        cout<<i<<"\r";
+    }
+    return mayor;
+
+}
+
 int fibonacci(int n){ //suma de pares menores que n           pd:2
 	int a=0,b=1,acum=b,acum_2=0;
 	for(int i=0;(a<n && b<n);i++){
