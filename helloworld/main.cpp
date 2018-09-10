@@ -22,6 +22,17 @@ int sumsquaredifference(int n){//n es el rango    pd:6
      return acum2*acum2-acum;
 }
 
+int nprimo(int n){ //n es el numero , del cual queremos hallar el mayor divisor primo pd:7
+    int counter=0,i=0;
+    for(i;counter<n+1;++i){
+        if(primo(i)){
+        counter++;
+         }
+    }
+    return i-1;
+
+}
+
 int mayprimo(long long n){ //n es el numero , del cual queremos hallar el mayor divisor primo   pd:3
     long long mayor=0;
     for(long long i=1;i<n/2+1;i++){
