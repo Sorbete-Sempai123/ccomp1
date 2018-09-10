@@ -10,6 +10,22 @@ int factorial(int n){
     return acum;
 }
 
+void cambio(int *x,int *y){
+	*x=*x+*y;
+	*y=*x-*y;
+	*x=*x-*y;
+}
+
+int fibonacci(int n){ //numero de veces
+	int a=0,b=1,acum=b,acum_2=0;
+	for(int i=0;(a<n && b<n);i++){
+		acum=a+b;
+		if(!(acum%2))acum_2+=acum;
+		a=b;b=acum;
+	}
+	return acum_2;
+}
+
 int sum_dig(int x){
 	int acum=0;
 	for(int i=1;x>9;i++){
