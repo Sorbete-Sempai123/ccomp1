@@ -22,6 +22,16 @@ int sumsquaredifference(int n){//n es el rango    pd:6
      return acum2*acum2-acum;
 }
 
+int fibonacci(int n){ //suma de pares menores que n           pd:2
+	int a=0,b=1,acum=b,acum_2=0;
+	for(int i=0;(a<n && b<n);i++){
+		acum=a+b;
+		if(!(acum%2))acum_2+=acum;
+		a=b;b=acum;
+	}
+	return acum_2;
+}
+
 int sum_mult_3_5(int n){//n es el rango      pd:1
     int acum=0; 
     for(int i=1;i<n+1;i++){//suma de los multiplos de 3 y 5 menores a n
