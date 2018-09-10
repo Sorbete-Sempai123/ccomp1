@@ -22,6 +22,15 @@ int sumsquaredifference(int n){//n es el rango    pd:6
      return acum2*acum2-acum;
 }
 
+int sum_mult_3_5(int n){//n es el rango      pd:1
+    int acum=0; 
+    for(int i=1;i<n+1;i++){//suma de los multiplos de 3 y 5 menores a n
+     if(i%3==0 || i%5==0)
+	acum+=i;
+     }
+     return acum;
+}
+
 void cambio(int *x,int *y){
 	*x=*x+*y;
 	*y=*x-*y;
